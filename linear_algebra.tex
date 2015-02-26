@@ -1,0 +1,341 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass{article}
+\usepackage{amssymb,amsmath}
+\begin{document}
+\section{Problem 20}
+\text{Let Q = (a,b,c,d,e). We want to solve for each coordinate such that:}\\
+\begin{equation*}
+\begin{split}
+2(3,3,0,1,-1) + 3Q &= (20,17,1,10,-7)\\
+(6,6,0,2,-2) + 3(a,b,c,d,e) &= (20,17,1,10,-7)\\
+(6+3a,6+3b,3c,2+3d,-2+3e) &= (20,17,1,10,-7)\\
+\end{split}
+\end{equation*}
+\text{Now just a matter of solving for each variable.}\\
+\begin{equation*}
+\begin{split}
+6 + 3a &= 20\\
+6 + 3b &= 17\\
+0 + 3c &= 1\\
+2 + 3d &= 10\\
+-2 + 3e &= -7\\
+\end{split}
+\xrightarrow{}
+\begin{split}
+3a &= 14\\
+3b &= 11\\
+3c &= 1\\
+3d &= 8\\
+3e &= -5\\
+\end{split}
+\xrightarrow{}
+\begin{split}
+a &= \frac{14}{3}\\
+b &= \frac{11}{3}\\
+c &= \frac{1}{3}\\
+d &= \frac{8}{3}\\
+e &= \frac{-5}{3}\\
+\end{split}
+\end{equation*}
+Finally we see,\\
+\begin{equation*}
+Q = \left(\frac{14}{3},\frac{11}{3},\frac{1}{3},\frac{8}{3},\frac{-5}{3}\right).
+\end{equation*}
+
+\newpage
+\section{Problem 21}
+For vectors (2,4,6,8,\ldots,40) and (1,3,5,7,\ldots,27), we want to find the
+following information: length, the 13th entry and the formula for the kth
+entry.
+\subsection{Finding length}
+At first glance, it is noticable that one vector consists of incrementing even
+integers and the other consists of incrementing odd integers. Then we can find
+the length using the definition of even and odd to find the index of the last
+entries 40 and 27.
+That is:\\
+\begin{equation*}
+\begin{split}
+2k &= 40\\
+&and\\
+2j-1 &= 27
+\end{split}
+\xrightarrow{}
+\begin{split}
+k &= \frac{40}{2}\\
+&and\\
+j &= \frac{27+1}{2}
+\end{split}
+\xrightarrow{}
+\begin{split}
+k &= 20\\
+&and\\
+j &= 14
+\end{split}
+\end{equation*}
+length of the first vector is 20 and the length of the second is 14
+\subsection{Finding the 13th entry}
+Using the same method I employed to find the length, I can find the 13th value
+in both vectors.\\
+Let i represent the index of each coordinate value in the first vector and let j
+represent the index of each coordinate value in the second vector.\\
+Let a and b represent the values of the coordinates at indeces i and j.\\
+Then:\\
+\begin{equation*}
+\begin{split}
+2i &= a\\
+&and\\
+2j-1 &= b\\
+\end{split}
+\xrightarrow{}
+\begin{split}
+2(13) &= a\\
+and\\
+2(13)-1 &= b\\
+\end{split}
+\xrightarrow{}
+\begin{split}
+26 &= a\\
+&and\\
+25 &= b\\
+\end{split}
+\end{equation*}
+\subsection{Formula for the kth entry}
+Since I accidentally found and utilized a method for finding entries in each
+vector, I will use those to define functions for the value at that index such
+that:\\
+\begin{equation*}
+\begin{split}
+f(k)&=2k,\\
+&and\\
+g(k)&=2k-1
+\end{split}
+\end{equation*}
+\newpage
+\section{Problem 22}
+\subsection{Compute}
+\begin{equation*}
+\begin{split}
+(2, 3, -7, 1) &+ (8, 0, -1, -1)\\
+(2+8, 3+0, -7&+(-1), 1+(-1))\\
+(10,3,&-8,0)
+\end{split}
+\end{equation*}
+And vice versa:\\
+\begin{equation*}
+\begin{split}
+(8, 0, -1, -1) &+ (2, 3, -7, 1)\\
+(8+2, 0+3, -1+&(-7), -1+(1))\\
+(10, 3, &-8, 0)\\
+\end{split}
+\end{equation*}
+\subsection{Adding generic vectors or length n}
+To show that Q + P = P + Q, we will define generic vectors of arbitrary length
+and perform the same operations in the last section.\\
+Let $P = (a_1, a_2, a_3,\ldots,a_n)$ and $Q = (b_1, b_2, b_3, \ldots, b_n)$\\
+\begin{equation*}
+\begin{split}
+(b_1, b_2, b_3, \ldots, b_n) + (a_1, a_2, a_3, \ldots, a_n) &= (a_1, a_2, a_3,
+\ldots, a_n) + (b_1, b_2, b_3, \ldots, b_n)\\
+(b_1 + a_1, b_2 + a_2, b_3 + a_3, \ldots, b_n + a_n) &= (a_1 + b_1, a_2 + b_2,
+a_3 + b_3, \ldots, a_n + b_n)
+\end{split}
+\end{equation*}
+Now by the our definition of vector equality,\\
+\begin{equation*}
+\begin{split}
+b_1 + a_1 &= a_1 + b_1\\
+b_2 + a_2 &= a_2 + b_2\\
+b_3 + a_3 &= a_3 + b_3\\
+\ldots &= \ldots\\
+b_n + a_n &= a_n + b_n
+\end{split}
+\hspace{10pt}\text{By the commutative property of addition,}\hspace{10pt}
+\begin{split}
+b_1 + a_1 &= b_1 + a_1\\
+b_2 + a_2 &= b_2 + a_2\\
+b_3 + a_3 &= b_3 + a_3\\
+\ldots &= \ldots\\
+b_n + a_n &= b_n + a_n
+\end{split}
+\end{equation*}\\
+Therefore, the commutative property is applicable to the addition of vectors of
+equal length.
+\newpage
+\section{Problem 23}
+To determine which of these vectors are in the span of $\mathbb{B} =
+\{(3,3,0,1,-1),(-14,-11,-1,-8,5)\}$ we have to show it is a linear combination
+of $\mathbb{B}$.
+\subsection{(20, 17, 1, 10, -7)}
+$\{t_1(3,3,0,1,-1) + t_2(-14,-11,-1,-8,5) = (20, 17, 1, 10, -7) \text{ where } 
+t_1,t_2 \in \mathbb{R}\}$\\
+\begin{equation*}
+\begin{split}
+t_1(3,3,0,1,-1) + t_2(-14,-11,-1,-8,5) &= (20, 17, 1, 10,
+-7)\\
+(3t_1,3t_1,0,t_1,-t_1) + (-14t_2,-11t_2,-1t_2,-8t_2,5t_2) &= (20, 17, 1,
+10, -7)\\
+(3t_1 + -14t_2, 3t_1 + -11t_2, 0 + -1t_2, t_1 + -8t_2, -t_1 + 5t_2) &= (20, 17, 1,
+10, -7)
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+3t_1 + -14t_2 &= 20\\
+3t_1 + -11t_2 &= 17\\
+-1t_2 &= 1\\
+t_1 + -8t_2 &= 10\\
+-t_1 + 5t_2 &= -7
+\end{split}
+\end{equation*}
+Solving for $t_2$ in the third equation, we can substitute its value
+throughout the other equations.\\
+\begin{equation*}
+\begin{split}
+3t_1 + -14t_2 &= 20\\
+3t_1 + -11t_2 &= 17\\
+t_2 &= -1\\
+t_1 + -8t_2 &= 10\\
+-t_1 + 5t_2 &= -7
+\end{split}
+\xrightarrow{}
+\begin{split}
+3t_1 + -14(-1) &= 20\\
+3t_1 + -11(-1) &= 17\\
+t_2 &= -1\\
+t_1 + -8(-1) &= 10\\
+-t_1 + 5(-1) &= -7
+\end{split}
+\xrightarrow{}
+\begin{split}
+3t_1 + 14 &= 20\\
+3t_1 + 11 &= 17\\
+t_2 &= -1\\
+t_1 + 8 &= 10\\
+-t_1 + -5 &= -7
+\end{split}
+\xrightarrow{}
+\begin{split}
+t_1 &= \frac{6}{3}\\
+t_1 &= \frac{6}{3}\\
+t_2 &= -1\\
+t_1 &= 2\\
+t_1 &= \frac{-2}{-1}
+\end{split}
+\xrightarrow{}
+\begin{split}
+t_1 &= 2\\
+t_1 &= 2\\
+t_2 &= -1\\
+t_1 &= 2\\
+t_1 &= 2
+\end{split}
+\end{equation*}\\
+Since the system of equations does not lead to an error, we know $(20, 17, 1,
+10, -7)$ is in the span of $\mathbb{B}$.\\
+\newpage
+\subsection{(0, 1, 4, 1, 1)}
+$\{t_1(3,3,0,1,-1) + t_2(-14,-11,-1,-8,5) = (0, 1, 4, 1, 1) \text{ where } 
+t_1,t_2 \in \mathbb{R}\}$\\
+\begin{equation*}
+\begin{split}
+t_1(3,3,0,1,-1) + t_2(-14,-11,-1,-8,5) &= (0, 1, 4, 1, 1)\\
+(3t_1,3t_1,0,t_1,-t_1) + (-14t_2,-11t_2,-1t_2,-8t_2,5t_2) &= (0, 1, 4, 1, 1)\\
+(3t_1 + -14t_2, 3t_1 + -11t_2, 0 + -1t_2, t_1 + -8t_2, -t_1 + 5t_2) &= (0, 1, 4, 1, 1)
+\end{split}
+\end{equation*}
+\\
+\begin{equation*}
+\begin{split}
+3t_1 + -14t_2 &= 0\\
+3t_1 + -11t_2 &= 1\\
+-1t_2 &= 4\\
+t_1 + -8t_2 &= 1\\
+-t_1 + 5t_2 &= 1
+\end{split}
+\xrightarrow{}
+\begin{split}
+3t_1 + -14t_2 &= 0\\
+3t_1 + -11t_2 &= 1\\
+t_2 &= -4\\
+t_1 + -8t_2 &= 1\\
+-t_1 + 5t_2 &= 1
+\end{split}
+\xrightarrow{}
+\begin{split}
+3t_1 + -14(-4) &= 0\\
+3t_1 + -11(-4) &= 1\\
+t_2 &= -4\\
+t_1 + -8(-4) &= 1\\
+-t_1 + 5(-4) &= 1
+\end{split}
+\xrightarrow{}
+\begin{split}
+3t_1 + 56 &= 0\\
+3t_1 + 56 &= 1\\
+t_2 &= -4\\
+t_1 + 32 &= 1\\
+-t_1 + -20 &= 1
+\end{split}
+\xrightarrow{}
+\begin{split}
+t_1 &= \frac{-56}{3}\\
+t_1 &= \frac{-55}{3}\\
+t_2 &= -4\\
+t_1 &= -31\\
+t_1 &= -21
+\end{split}
+\end{equation*}\\
+Since this system shows $t_1 = \frac{-56}{3} = -31 = -21$, and we know that it
+is false, we can conclude that $(0, 1, 4, 1, 1)$ is not in the span of
+$\mathbb{B}$.\\
+\subsection{zero-vector}
+$\{t_1(3,3,0,1,-1) + t_2(-14,-11,-1,-8,5) = (0, 0, 0, 0, 0) \text{ where } 
+t_1,t_2 \in \mathbb{R}\}$\\
+\begin{equation*}
+\begin{split}
+t_1(3,3,0,1,-1) + t_2(-14,-11,-1,-8,5) &= (0, 0, 0, 0, 0)\\
+(3t_1,3t_1,0,t_1,-t_1) + (-14t_2,-11t_2,-1t_2,-8t_2,5t_2) &= (0, 0, 0, 0, 0)\\
+(3t_1 + -14t_2, 3t_1 + -11t_2, 0 + -1t_2, t_1 + -8t_2, -t_1 + 5t_2) &= (0, 0, 0, 0, 0)
+\end{split}
+\end{equation*}
+\\
+\begin{equation*}
+\begin{split}
+3t_1 + -14t_2 &= 0\\
+3t_1 + -11t_2 &= 0\\
+-1t_2 &= 0\\
+t_1 + -8t_2 &= 0\\
+-t_1 + 5t_2 &= 0
+\end{split}
+\xrightarrow{}
+\begin{split}
+3t_1 + -14t_2 &= 0\\
+3t_1 + -11t_2 &= 0\\
+t_2 &= 0\\
+t_1 + -8t_2 &= 0\\
+-t_1 + 5t_2 &= 0
+\end{split}
+\xrightarrow{}
+\begin{split}
+3t_1 + 0 &= 0\\
+3t_1 + 0 &= 0\\
+t_2 &= 0\\
+t_1 + 0 &= 0\\
+-t_1 + 0 &= 0
+\end{split}
+\xrightarrow{}
+\begin{split}
+t_1 &= 0\\
+t_1 &= 0\\
+t_2 &= 0\\
+t_1 &= 0\\
+t_1 &= 0
+\end{split}
+\end{equation*}
+Since the system of equations does not lead to an error, we know the zero vector
+is in the span of $\mathbb{B}$.\\
+%%\newpage
+%%\section{Problem 24}
+
+\end{document}
